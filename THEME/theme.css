@@ -1,0 +1,73 @@
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 9999;   /* Light mode bg */
+  color: #111;                    /* icon color */
+  transition: background .2s, color .2s, box-shadow .2s;
+  border: none; /* border remove */
+}
+.theme-toggle:focus {
+  outline: none;
+}
+
+.icon { display: block; }
+
+/* show only sun in light mode */
+.theme-toggle .moon { display: none; }
+
+/* Dark mode button style */
+body.dark-mode .theme-toggle { /* Dark mode bg */
+  color: #ffffff00;                      
+  border: none; /* border remove */
+}
+/* show only moon in dark mode */
+body.dark-mode .theme-toggle .sun { display: none; }
+body.dark-mode .theme-toggle .moon { display:block; }
+
+
+body.dark .theme-toggle {
+  color: #ffffff;
+}
+
+body.dark .left-side {
+  background: linear-gradient(135deg, rgb(77, 77, 251) , rgb(206, 206, 244)); /* Dark mode bg */
+}
+
+body.dark .forgot-password:hover {
+    color: #76fff6;
+}
+
+body.dark .theme-toggle i {
+  color: #ffffff;
+  margin: 1px;
+}
+
+body.dark .forgot-password {
+  color: white;
+  font-weight: 500;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.toggle-btn.active {
+  background: #000000;
+  border-radius: 20px;
+}

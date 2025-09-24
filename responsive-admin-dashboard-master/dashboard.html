@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>EcoSphere Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">eco</span> EcoSphere
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item"><a href="dashboard.html"><span class="material-icons-outlined">dashboard</span> Dashboard</a></li>
+          <li class="sidebar-list-item"><a href="electricity.html"><span class="material-icons-outlined">flash_on</span> Electricity Usage</a></li>
+          <li class="sidebar-list-item"><a href="water.html"><span class="material-icons-outlined">water</span> Water Usage</a></li>
+          <li class="sidebar-list-item"><a href="reports.html"><span class="material-icons-outlined">poll</span> Reports</a></li>
+          <li class="sidebar-list-item"><a href="./AI-ChatBot-HTML-main/chatbot ai/index.html"><span class="material-icons-outlined">chat</span>Chat Bot</a></li>
+          <li class="sidebar-list-item"><a href="settings.html"><span class="material-icons-outlined">settings</span> Settings</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">TOTAL DEVICES</p>
+              <span class="material-icons-outlined text-blue">devices</span>
+            </div>
+            <span class="text-primary font-weight-bold">12</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">ELECTRICITY USAGE</p>
+              <span class="material-icons-outlined text-orange">flash_on</span>
+            </div>
+            <span class="text-primary font-weight-bold">320 kWh</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">WATER USAGE</p>
+              <span class="material-icons-outlined text-blue">water</span>
+            </div>
+            <span class="text-primary font-weight-bold">4500 L</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">ALERTS</p>
+              <span class="material-icons-outlined text-red">notification_important</span>
+            </div>
+            <span class="text-primary font-weight-bold">3</span>
+          </div>
+
+        </div>
+
+        <!-- Charts -->
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">Daily Usage (kWh & Liters)</p>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Monthly Consumption Trends</p>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
